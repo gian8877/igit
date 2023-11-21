@@ -1,0 +1,46 @@
+000100200420
+000200200420             /*================================ =================================================================/*/
+000300200522             /*         PG00011 - Lanciatore del programma di controllo                                          /*/
+000400200420             /*                                                                                                  /*/
+000500200421             /*         rel 1.2   Tolti i comandi di trasformazione del file dbwork perchè inseriti nel pg009    /*/
+000600200420             /*         rel 1.1   Aggiunto il campo avvimm per gestire l'avvio automatico del pgm di reazione     /*/
+000700200421             /*         rel 1.0   Il programma riceve in La sonda viene lanciata solo se il flag Lancio auto = S  /*/
+000800200420             /*                                                                                                  /*/
+000900200420             /*         Parametri input: Sonda, Libreria, pgm da lanciare                                        /*/
+001000200420             /*                                                                                                  /*/
+001100200420             /*         Paramteri output: Esito, Messagio severità                                               /*/
+001200200522             /* CALL PGM(PG00011) PARM(SONDA03 WFTEST SONDA03 ' ' ' ' ' ' ' ')                                   /*/
+001300200420             /*                                                                                                  /*/
+001400200420             /*==================================================================================================/*/
+001500200420
+001600200420             pgm        parm(&nome &lib &pgm &paesit &pamess &pasev &avvimm)
+001700200402
+001800200420             dcl        &nome *char 10 /* Nome Sonda */
+001900200420             dcl        &lib *char 10 /* Libreria */
+002000200420             dcl        &pgm *char 10 /*Programma da chiamare */
+002100200420             dcl        &paesit *char 2 /* esito dei controlli OK - KO */
+002200200420             dcl        &pamess *char 80 /* messaggi odescrittivo dell'esito */
+002300200421             dcl        &pasev *char 1 /* Severità del termine esecuzione */
+002400200420             dcl        &avvimm *char 1 /*Avvio immediato azione 'S' = Si */
+002501200527             dcl        &msgid *char 10 /*Id messaggio */
+002502200527
+002600200402
+002700200402             monmsg     cpf0000
+002800200402
+002900220210             chkobj     qtemp/dbwork *file
+002901220210             monmsg     cpf9801 exec(goto skip)
+002902220210
+002903220210
+003000220210             dltf       qtemp/dbwork
+003100220210        /*   dltf       wwe/&nome                    */
+003200200402
+003300220210        /*   dltf       qtemp/dbout                  */
+003400220210        /*   crtpf      qtemp/dbout rcdlen(4000)     */
+003401201002
+003500200402
+003600220210 skip:       call       &lib/&pgm parm(&nome &paesit &pamess &pasev &avvimm &msgid)
+003700200421
+003800220208             CALL       PGM(PG009NEW) PARM(&nome &paesit &pamess &pasev &avvimm &msgid)
+003900200402
+004000200402
+004100200402             endpgm

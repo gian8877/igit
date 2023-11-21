@@ -1,0 +1,14 @@
+000100231109             pgm
+000101231109             dcl        &uno *char    10
+000102231109
+000103231109  /* modifica numero uno */
+<<<<<<< master
+000104231109  /* modifica numero due */
+000105231109  /* modifica numero tre */
+000106231109  /* modifica numero quattro */
+000107231109             endpgm
+000108231109
+=======
+000104231109             endpgm
+000105231109
+>>>>>>> 28a4acd Modifica numero due
