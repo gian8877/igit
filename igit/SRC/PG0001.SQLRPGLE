@@ -19,7 +19,7 @@
 001900200402  dcl-pi *n;
 002000200402    pasonda char(10);  // Nome Sonda
 002100200402  END-PI;
-002200200402
+002200231127
 002300200402  dcl-pr QCMDEXC extpgm ;
 002400200402    *n char(500) options(*varsize) const ;
 002500200402    *n packed(15:5) const ;
