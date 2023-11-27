@@ -1,15 +1,4 @@
 000100231109             pgm
-000101231109             dcl        &uno *char    10
-000102231121             dcl        &uno *char    10
-000103231121             dcl        &uno *char    10
-000104231121             dcl        &uno *char    10
-000105231121             dcl        &uno *char    10
-000106231121             dcl        &uno *char    10
-000107231127             dcl        &uno *char    10
-000108231127             dcl        &uno *char    10
-000109231127             dcl        &uno *char    10
-000110231127             dcl        &uno *char    10
-000111231127             dcl        &uno *char    10
-000112231121             /* Modificata per colombini */
+000101231127             dcl &due *char 10
 000113231109             endpgm
 000114231109
