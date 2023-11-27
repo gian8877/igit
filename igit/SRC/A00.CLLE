@@ -1,7 +1,7 @@
 000100231109             pgm
 000101231127             dcl &due *char 10
-000103231127             /* aggiornata per Antonio e Gian Domenico*/
+000103231127             /* aggiornata per Antonio e GianDomenico*/
 000104231127                    /* --------------------------------------------*/
-000105231127             /* domanda di antonio */
+000105231127                   /*domanda da Giancarlo */
 000113231109             endpgm
 000114231109
