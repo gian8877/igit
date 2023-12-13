@@ -1,8 +1,9 @@
 000100231109             pgm
-000101231129             dcl &due *char 10 /*modificata */
+000101231127             dcl &due *char 10
 000102231129             dcl &due *char 10
 000103231129             dcl &due *char 10
 000104231129             dcl &due *char 10
 000105231129             dcl &due *char 10
+000106231129             dcl &due *char 10
 000113231109             endpgm
 000114231109

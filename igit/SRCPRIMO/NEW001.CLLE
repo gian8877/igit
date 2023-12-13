@@ -5,5 +5,6 @@
 000104231121             dcl        &uno *char    10
 000105231121             dcl        &uno *char    10
 000106231121             dcl        &uno *char    10
-000107231109             endpgm
-000108231109
+000107231128             /* modifica per dimostrazione Andrea */
+000108231109             endpgm
+000109231109

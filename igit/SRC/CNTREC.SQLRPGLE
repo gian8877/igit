@@ -1,0 +1,15 @@
+000100231130**free
+000101231130ctl-opt option(*srcstmt:*nodebugio)  decedit('0,') Datedit(*DMY/) alwnull(*usrctl) DFTACTGRP(*no) ;
+000102231130
+000103231130dcl-s NumeroRecords int(10); //numero records
+000104231130
+000105231130exec sql SET OPTION COMMIT=*NONE,CLOSQLCSR=*ENDMOD,DATFMT=*ISO,NAMING = *SYS;
+000106231130
+000107231130exec sql
+000108231130
+000109231130      select sum(NUMBER_ROWS) as numrec into :NumeroRecords from qsys2.SYSPARTITIONSTAT
+000111231130      WHERE TABLE_SCHEMA = 'WWE' and TABLE_NAME ='DBSONDE'     ;
+000112231130
+000113231130dsply %editc(NumeroRecords:'2');
+000114231130
+000115231130*inlr = *on;

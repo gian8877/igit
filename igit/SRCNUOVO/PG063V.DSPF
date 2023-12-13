@@ -1,0 +1,260 @@
+000010220128     A*%%TS  SD  20220128  185619  QSECOFR     REL-V7R4M0  5770-WDS
+000020220128     A*%%EC
+000030220128     A                                      DSPSIZ(27 132 *DS4)
+000040220128     A                                      CHGINPDFT
+000050220128     A                                      CA03(03 'Fine lavoro')
+000060220128     A                                      CA06(06 'Nuovo Host')
+000061230213     A                                      CF09(09 'gestione msg da omettere')
+000062230213     A                                      CA08(08 'Analisi')
+000070201008     A          R SF1                       SFL
+000080201008     A*%%TS  SD  20201008  151939  QSECOFR     REL-V7R4M0  5770-WDS
+000090201008     A            WSSCEL         1A  B  5  3DSPATR(UL)
+000100201008     A                                      VALUES(' ' '2' '4')
+000110210930     A            NOME          10A  B  5  9DSPATR(PR)
+000120201008     A                                      DSPATR(HI)
+000130220128     A            DESCRI        40A  O  5 22
+000140210930     A            SOSPESO        1A  O  5  6DSPATR(HI)
+000150201008     A                                      COLOR(TRQ)
+000160220207     A            ESITO          2A  O  5 65
+000161220207     A  40                                  COLOR(GRN)
+000162220207     A  41                                  COLOR(YLW)
+000163220207     A  42                                  COLOR(RED)
+000180220131     A            TIME          25A     5 70
+000181220207     A  40                                  COLOR(GRN)
+000182220207     A  41                                  COLOR(YLW)
+000183220207     A  42                                  COLOR(RED)
+000200210930     A            RRN           10A  H
+000201220131     A            MESS          35A     5 97
+000202220207     A  40                                  COLOR(GRN)
+000203220207     A  41                                  COLOR(YLW)
+000204220207     A  42                                  COLOR(RED)
+000210190905     A          R SC1                       SFLCTL(SF1)
+000220190905     A*%%TS  SD  20190905  161804  QSECOFR     REL-V7R1M0  5770-WDS
+000230190905     A                                      SFLSIZ(9999)
+000240200525     A                                      SFLPAG(21)
+000250190905     A                                      OVERLAY
+000260190905     A  12                                  SFLDSP
+000270190905     A N11                                  SFLDSPCTL
+000280190905     A  11                                  SFLCLR
+000290200522     A                                  3  3'2=Modifica 4=Cacellazione'
+000300200522     A                                      COLOR(PNK)
+000310210930     A                                  4  9'Nome      '
+000320200522     A                                      COLOR(BLU)
+000330200522     A                                      DSPATR(UL)
+000340220131     A                                  4 70'Ultimo controllo        '
+000360200522     A                                      COLOR(BLU)
+000370200522     A                                      DSPATR(UL)
+000380220128     A                                  4 22'Descrizione                       -
+000390201008     A                                            '
+000400200522     A                                      COLOR(BLU)
+000410200522     A                                      DSPATR(UL)
+000420210930     A                                  4  6'So'
+000430200522     A                                      COLOR(BLU)
+000440200522     A                                      DSPATR(UL)
+000450200625     A            ADESSO          Z  O  1 95COLOR(YLW)
+000460200625     A                                  1123SYSNAME
+000470200625     A                                  2  2' ----------------------------------
+000480200625     A                                      ------------------------------------
+000490200625     A                                      ------------------------------------
+000500200625     A                                      -------------------------'
+000510200625     A                                      COLOR(RED)
+000520220128     A                                  1  2'WWE - Manutenzione controlli per j-
+000530220128     A                                      ob di salvataggio'
+000540200625     A                                      COLOR(WHT)
+000550220128     A                                  4 63'Esito'
+000560201008     A                                      COLOR(BLU)
+000570201008     A                                      DSPATR(UL)
+000571220131     A                                  4 97'Messaggio                         '
+000572220131     A                                      COLOR(BLU)
+000573220131     A                                      DSPATR(UL)
+000580200625
+000590190826     A          R W01
+000600190826     A*%%TS  SD  20190826  143549  QSECOFR     REL-V7R1M0  5770-WDS
+000610200625     A                                 27121'F3 = Fine'
+000620190826     A                                      COLOR(BLU)
+000630210610     A                                 27  4'F6 = Nuovo Controllo '
+000640200522     A                                      COLOR(TRQ)
+000650200625     A                                 26  2' ----------------------------------
+000660200625     A                                      ------------------------------------
+000670200625     A                                      ------------------------------------
+000680200625     A                                      -------------------------'
+000690200625     A                                      COLOR(RED)
+000691230213     A                                 27 33'F9 = Gestione messaggi da omettere-
+000692230213     A                                       '
+000693230213     A                                      COLOR(YLW)
+000700220128     A          R W02
+000710220128     A*%%TS  SD  20220128  185619  QSECOFR     REL-V7R4M0  5770-WDS
+000720230213     A                                 27123'F3 = Fine '
+000730220128     A                                      COLOR(BLU)
+000740220128     A            ADESSO          Z  O  1 95COLOR(YLW)
+000750220128     A                                  1123SYSNAME
+000760220128     A                                  2  2' ----------------------------------
+000770220128     A                                      ------------------------------------
+000780220128     A                                      ------------------------------------
+000790220128     A                                      -------------------------'
+000800220128     A                                      COLOR(RED)
+000810220128     A            NOME          10A  B  3 23COLOR(WHT)
+000820220128     A                                      DSPATR(UL)
+000830220128     A            DESCRI        40A  B  3 37CHECK(LC)
+000840220128     A                                      DSPATR(UL)
+000850220128     A                                  5  3'Sospeso .........:'
+000860220128     A            SOSPESO        1A  B  5 24DSPATR(UL)
+000870220128     A                                      VALUES('S' ' ' 'N')
+000880220128     A                                      COLOR(WHT)
+000890220128     A                                 26  2' ----------------------------------
+000900220128     A                                      ------------------------------------
+000910220128     A                                      ------------------------------------
+000920220128     A                                      -------------------------'
+000930220128     A                                      COLOR(RED)
+000940220128     A                                 13  3'Lunedì ..........:'
+000950220128     A                                 14  3'Martedì..........:'
+000960220128     A                                 15  3'Mercoledì........:'
+000970220128     A                                 16  3'Giovedì .........:'
+000980220128     A                                 17  3'Venerdì .........:'
+000990220128     A                                 18  3'Sabato ..........:'
+001000220128     A                                 19  3'Domenica ........:'
+001010220128     A                                 22  4'Ultimo controllo.:'
+001020220128     A            LASTCK          Z  O 22 23COLOR(BLU)
+001030220128     A                                 23  4'Esito ..........:'
+001040220128     A            ESITO          2A  O 23 23
+001050220128     A N43                                  COLOR(BLU)
+001060220128     A  43                                  COLOR(RED)
+001070220128     A                                 24  4'Messaggio ......:'
+001080220128     A            MESSAGE       80A  O 24 23
+001090220128     A N43                                  COLOR(BLU)
+001100220128     A  43                                  COLOR(RED)
+001110220128     A                                 12 23'S/N'
+001120220128     A                                      DSPATR(UL)
+001130220128     A                                      COLOR(BLU)
+001140220128     A                                 12  3'Controlli .......:'
+001150220128     A                                      DSPATR(UL)
+001160220128     A                                      COLOR(BLU)
+001170220128     A                                 10  3'ID Messaggio.....:'
+001180220128     A            MSGID         10A  B 10 24DSPATR(UL)
+001190220128     A                                      COLOR(WHT)
+001200220128     A                                 10 36'Id Messaggio usato per identificar-
+001210220128     A                                      e l''evento'
+001220220128     A                                      COLOR(BLU)
+001230220128     A                                  3  3'Nome.............:'
+001240220128     A            ERRORE       100A  O 27  3COLOR(RED)
+001260230213     A            TIPOLOG        1A  B  3 83
+001270220128     A                                      VALUES('N' 'E' 'C')
+001280220128     A                                      COLOR(WHT)
+001281230213     A                                      DSPATR(PR)
+001282230213     A                                      DSPATR(ND)
+001320220128     A                                  8  3'Ore Ritroso .....:'
+001330220128     A            RITROSO        5Y 0B  8 24COLOR(WHT)
+001340220128     A                                      DSPATR(UL)
+001350220128     A                                      EDTCDE(2)
+001360220128     A                                  8 36'Numero di ore a ritroso per verifi-
+001370220128     A                                      care lo start del job'
+001380220128     A                                      COLOR(BLU)
+001390220128     A                                  1  2'WWE - Manutenzione controlli per j-
+001400220128     A                                      ob di salvataggio'
+001410220128     A                                      COLOR(WHT)
+001420220128     A                                  5 36'S=Controllo Sospeso'
+001430220128     A                                      COLOR(BLU)
+001440220128     A            LUN            1A  B 13 24DSPATR(UL)
+001450220128     A                                      VALUES('S' 'N')
+001460220128     A                                      COLOR(WHT)
+001470220128     A            GIO            1A  B 16 24DSPATR(UL)
+001480220128     A                                      VALUES('S' 'N')
+001490220128     A                                      COLOR(WHT)
+001500220128     A            MER            1A  B 15 24DSPATR(UL)
+001510220128     A                                      VALUES('S' 'N')
+001520220128     A                                      COLOR(WHT)
+001530220128     A            VEN            1A  B 17 24DSPATR(UL)
+001540220128     A                                      VALUES('S' 'N')
+001550220128     A                                      COLOR(WHT)
+001560220128     A            MAR            1A  B 14 24DSPATR(UL)
+001570220128     A                                      VALUES('S' 'N')
+001580220128     A                                      COLOR(WHT)
+001590220128     A            SAB            1A  B 18 24DSPATR(UL)
+001600220128     A                                      VALUES('S' 'N')
+001610220128     A                                      COLOR(WHT)
+001620220128     A            DOM            1A  B 19 24DSPATR(UL)
+001630220128     A                                      VALUES('S' 'N')
+001640220128     A                                      COLOR(WHT)
+001641230213     A                                 27105'F8 = Analisi job '
+001642230213     A                                      COLOR(YLW)
+001643230213     A          R SF2                       SFL
+001644230213     A*%%TS  SD  20201008  151939  QSECOFR     REL-V7R4M0  5770-WDS
+001645230213     A            WSSCE2         1A  B  5  3
+001646230213     A                                      VALUES(' ' '1')
+001647230213     A                                      DSPATR(UL)
+001648230213     A N51                                  DSPATR(PR)
+001649230213     A            OMID           7A  B  5 15DSPATR(PR)
+001650230213     A  51                                  COLOR(RED)
+001651230213     A N51                                  COLOR(GRN)
+001652230213     A                                      DSPATR(HI)
+001653230213     A            MSTEXT        94A  B  5 35
+001654230213     A  51                                  COLOR(RED)
+001655230213     A N51                                  COLOR(GRN)
+001656230213     A                                      DSPATR(PR)
+001660230213     A            RRN           10A  H
+001661230213     A            MSID           7A  B  5 26DSPATR(PR)
+001662230213     A                                      DSPATR(HI)
+001663230213     A  51                                  COLOR(RED)
+001664230213     A N51                                  COLOR(GRN)
+001665230213     A            MSERR          5A  B  5  6DSPATR(PR)
+001666230213     A                                      DSPATR(HI)
+001667230213     A  51                                  COLOR(RED)
+001668230213     A N51                                  COLOR(GRN)
+001669230213     A          R SC2                       SFLCTL(SF2)
+001670230213     A*%%TS  SD  20190905  161804  QSECOFR     REL-V7R1M0  5770-WDS
+001671230213     A                                      SFLSIZ(9999)
+001672230213     A                                      SFLPAG(21)
+001673230213     A                                      OVERLAY
+001674230213     A  22                                  SFLDSP
+001675230213     A N21                                  SFLDSPCTL
+001676230213     A  21                                  SFLCLR
+001677230213     A                                  4  6'Errore'
+001678230213     A                                      COLOR(BLU)
+001679230213     A                                      DSPATR(UL)
+001688230213     A            ADESSO          Z  O  1 95COLOR(YLW)
+001689230213     A                                  1123SYSNAME
+001690230213     A                                  2  2' ----------------------------------
+001691230213     A                                      ------------------------------------
+001692230213     A                                      ------------------------------------
+001693230213     A                                      -------------------------'
+001694230213     A                                      COLOR(RED)
+001695230213     A                                  1  2'WWE - Analisi JOB'
+001697230213     A                                      COLOR(WHT)
+001698230213     A                                  4 35'Esito                             -
+001699230213     A                                                                         -
+001700230213     A                                                              '
+001701230213     A                                      COLOR(BLU)
+001702230213     A                                      DSPATR(UL)
+001703230213     A                                  4 15'Omit   '
+001704230213     A                                      COLOR(BLU)
+001705230213     A                                      DSPATR(UL)
+001706230213     A                                  4 26'MsgId  '
+001707230213     A                                      COLOR(BLU)
+001708230213     A                                      DSPATR(UL)
+001709230213     A            NOME          10   O  1 26COLOR(WHT)
+001710230213     A                                  4  3'1'
+001711230213     A                                      COLOR(BLU)
+001712230213     A                                      DSPATR(UL)
+001713230213     A                                  3  3'1 = Aggiunta al database dei messa-
+001714230213     A                                      ggi da omettere'
+001715230213     A                                      COLOR(BLU)
+001716230213     A          R W03
+001717230213     A*%%TS  SD  20190826  143549  QSECOFR     REL-V7R1M0  5770-WDS
+001718230213     A                                 27121'F3 = Fine'
+001719230213     A                                      COLOR(BLU)
+001720230213     A                                 27  4'F6 = Nuovo Controllo '
+001721230213     A                                      COLOR(TRQ)
+001722230213     A                                 26  2' ----------------------------------
+001723230213     A                                      ------------------------------------
+001724230213     A                                      ------------------------------------
+001725230213     A                                      -------------------------'
+001726230213     A                                      COLOR(RED)
+001727230213     A                                 27 33'F9 = Gestione messaggi da omettere-
+001728230213     A                                       '
+001729230213     A                                      COLOR(YLW)
+001730230213
+001731230213     A*%%RS+<record-sequences>
+001732230213     A*%%RS+ <sequence name="Senza nome">
+001733230213     A*%%RS+  <device type="display" width="132" height="27" />
+001734230213     A*%%RS+ </sequence>
+001735230213     A*%%RS </record-sequences>
